@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termux 2.8</title>
+    <style>
+      :root {
+        --bg: #07111f;
+        --bg-soft: #0d1b2a;
+        --panel: #10263d;
+        --panel-alt: #18324a;
+        --primary: #35d399;
+        --primary-2: #66e3a3;
+        --text: #eaf7ff;
+        --muted: #a8bfd4;
+        --border: rgba(255,255,255,0.08);
+        --shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg) 0%, #111827 100%);
+        color: var(--text);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px 20px 60px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0 34px;
+      }
+
+      .brand {
+        font-size: 1.35rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .nav {
+        display: flex;
+        gap: 18px;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.96rem;
+      }
+
+      .nav a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 30px;
+        align-items: center;
+        background: rgba(16, 38, 61, 0.8);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 38px 32px;
+        box-shadow: var(--shadow);
+      }
+
+      .eyebrow {
+        display: inline-block;
+        background: rgba(53, 211, 153, 0.12);
+        color: var(--primary-2);
+        border: 1px solid rgba(53, 211, 153, 0.25);
+        border-radius: 999px;
+        font-size: 0.8rem;
+        padding: 8px 12px;
+        margin-bottom: 18px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.5rem, 4vw, 4.1rem);
+        line-height: 1.05;
+      }
+
+      .lead {
+        margin: 0 0 28px;
+        color: var(--muted);
+        font-size: 1.08rem;
+        line-height: 1.7;
+      }
+
+      .actions {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 14px 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        border: 1px solid transparent;
+        transition: transform 0.2s ease, opacity 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--primary-2));
+        color: #052510;
+      }
+
+      .btn-secondary {
+        background: transparent;
+        border-color: var(--border);
+        color: var(--text);
+      }
+
+      .art {
+        display: grid;
+        place-items: center;
+        min-height: 260px;
+        background: radial-gradient(circle at top, rgba(53, 211, 153, 0.18), transparent 55%);
+        border-radius: 18px;
+        border: 1px solid var(--border);
+      }
+
+      .terminal {
+        width: min(95%, 330px);
+        border-radius: 16px;
+        overflow: hidden;
+        background: #091520;
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: var(--shadow);
+      }
+
+      .terminal-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255,255,255,0.03);
+        padding: 12px 14px;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+      }
+
+      .dot.red { background: #ff5f56; }
+      .dot.yellow { background: #ffbd2e; }
+      .dot.green { background: #27c93f; }
+
+      .terminal-body {
+        padding: 18px 16px 14px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 0.9rem;
+        line-height: 1.8;
+        color: #d7fbe7;
+      }
+
+      .terminal-body .prompt { color: var(--primary-2); }
+      .terminal-body .cmd { color: #f2c66d; }
+
+      .cards {
+        margin-top: 34px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .card {
+        background: rgba(16, 38, 61, 0.8);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 22px 20px;
+      }
+
+      .card h3 {
+        margin: 0 0 10px;
+        font-size: 1.15rem;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.7;
+      }
+
+      .footer {
+        margin-top: 34px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 0.95rem;
+      }
+
+      @media (max-width: 760px) {
+        .hero {
+          grid-template-columns: 1fr;
+          padding: 24px 18px;
+        }
+
+        .cards {
+          grid-template-columns: 1fr;
+        }
+
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="brand">Termux 2.8</div>
+        <nav class="nav" aria-label="Main navigation">
+          <a href="#overview">Overview</a>
+          <a href="#features">Features</a>
+          <a href="#repo">Repository</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero" id="overview">
+          <div>
+            <div class="eyebrow">Linux Terminal for Android</div>
+            <h1>Built for powerful mobile workflows.</h1>
+            <p class="lead">
+              Termux 2.8 brings a lightweight Linux environment to Android with terminal access,
+              package management, scripting, and developer tools in one clean experience.
+            </p>
+            <div class="actions">
+              <a class="btn btn-primary" href="https://github.com/diptarafder17-prog/Termux2.8" target="_blank" rel="noreferrer">Open Repository</a>
+              <a class="btn btn-secondary" href="#features">Explore Features</a>
+            </div>
+          </div>
+
+          <div class="art" aria-label="Terminal illustration">
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-body">
+                <div><span class="prompt">$</span> <span class="cmd">pkg update</span></div>
+                <div><span class="prompt">$</span> <span class="cmd">apt install git</span></div>
+                <div><span class="prompt">$</span> <span class="cmd">python app.py</span></div>
+                <div><span class="prompt">$</span> <span class="cmd">ssh user@server</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="cards" id="features">
+          <article class="card">
+            <h3>Terminal Access</h3>
+            <p>Run command-line tools, shell scripts, and remote workflows directly from your Android device.</p>
+          </article>
+
+          <article class="card">
+            <h3>Package Ecosystem</h3>
+            <p>Install tools for development, automation, networking, and experimentation with a familiar package manager.</p>
+          </article>
+
+          <article class="card" id="repo">
+            <h3>Open Source</h3>
+            <p>Explore the project in GitHub and customize or extend the experience to fit your workflow.</p>
+          </article>
+        </section>
+      </main>
+
+      <footer class="footer">
+        Repository: <a href="https://github.com/diptarafder17-prog/Termux2.8" style="color: #9ae6b4; text-decoration: none;" target="_blank" rel="noreferrer">diptarafder17-prog/Termux2.8</a>
+      </footer>
+    </div>
+  </body>
+</html>
