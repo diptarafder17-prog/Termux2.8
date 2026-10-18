@@ -1,0 +1,580 @@
+== Installed Android Tools ==
+
+2025-05-27 15:41:28,821 DEBUG: Reading 'config.yml'
+2025-05-27 15:41:28,837 INFO: Creating log directory
+2025-05-27 15:41:28,837 INFO: Creating temporary directory
+2025-05-27 15:41:28,837 INFO: Creating output directory
+2025-05-27 15:41:28,916 DEBUG: Getting git vcs interface for https://github.com/termux/termux-app.git
+2025-05-27 15:41:28,916 DEBUG: Checking com.termux:1022
+2025-05-27 15:41:28,916 INFO: Building version 0.119.0-beta.3 (1022) of com.termux
+2025-05-27 15:41:28,916 WARNING: Android NDK version '22.1.7171670' could not be found!
+2025-05-27 15:41:28,916 WARNING: Configured versions:
+Downloading https://f-droid.github.io/android-sdk-transparency-log/signed/checksums.json.asc into /home/vagrant/.cache/sdkmanager/checksums.json.asc
+2025-05-27 15:41:29,807 DEBUG: Starting new HTTPS connection (1): f-droid.github.io:443
+2025-05-27 15:41:30,101 DEBUG: https://f-droid.github.io:443 "GET /android-sdk-transparency-log/signed/checksums.json.asc HTTP/1.1" 200 488
+2025-05-27 15:41:30,112 DEBUG: Starting new HTTPS connection (1): f-droid.github.io:443
+2025-05-27 15:41:30,365 DEBUG: https://f-droid.github.io:443 "GET /android-sdk-transparency-log/signed/checksums.json HTTP/1.1" 200 148852
+Downloading https://f-droid.github.io/android-sdk-transparency-log/signed/checksums.json into /home/vagrant/.cache/sdkmanager/checksums.json
+Downloading https://dl.google.com/android/repository/android-ndk-r22b-linux-x86_64.zip into /home/vagrant/.cache/sdkmanager/android-ndk-r22b-linux-x86_64.zip
+2025-05-27 15:41:30,818 DEBUG: Starting new HTTPS connection (1): dl.google.com:443
+2025-05-27 15:41:31,076 DEBUG: https://dl.google.com:443 "GET /android/repository/android-ndk-r22b-linux-x86_64.zip HTTP/1.1" 200 1148198368
+Unzipping to /tmp/.sdkmanager-wttk52p8
+Installing into /opt/android-sdk/ndk/22.1.7171670
+2025-05-27 15:43:03,088 INFO: Set NDK 22.1.7171670 (22.1.7171670) up
+2025-05-27 15:43:03,094 DEBUG: Popen(['git', 'log', '-n', '1', '--pretty=%ct'], cwd=/home/vagrant/build/com.termux, universal_newlines=False, shell=None, istream=None)
+2025-05-27 15:43:04,552 INFO: Running 'sudo' commands in /home/vagrant
+2025-05-27 15:43:04,553 DEBUG: > sudo DEBIAN_FRONTEND=noninteractive bash -e -u -o pipefail -x -c echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list.d/bullseye.list; apt-get update; apt-get install -y file; apt-get install -y -t bullseye openjdk-11-jdk-headless; update-java-alternatives --set java-1.11.0-openjdk-amd64
++ echo 'deb https://deb.debian.org/debian bullseye main'
++ apt-get update
+Get:1 https://security.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Get:2 https://deb.debian.org/debian bullseye InRelease [116 kB]
+Get:3 https://debian.osuosl.org/debian bookworm InRelease [151 kB]
+Get:4 https://security.debian.org/debian-security bookworm-security/main amd64 Packages [261 kB]
+Get:5 https://security.debian.org/debian-security bookworm-security/main Translation-en [157 kB]
+Get:6 https://debian.osuosl.org/debian bookworm-updates InRelease [55.4 kB]
+Get:7 https://deb.debian.org/debian bullseye/main amd64 Packages [8066 kB]
+Get:8 https://debian.osuosl.org/debian bookworm-backports InRelease [59.4 kB]
+Get:9 https://deb.debian.org/debian bullseye/main Translation-en [6235 kB]
+Get:10 https://debian.osuosl.org/debian bookworm/main amd64 Packages [8793 kB]
+Get:11 https://debian.osuosl.org/debian bookworm/main Translation-en [6109 kB]
+Get:12 https://debian.osuosl.org/debian bookworm-updates/main amd64 Packages [512 B]
+Get:13 https://debian.osuosl.org/debian bookworm-updates/main Translation-en [360 B]
+Get:14 https://debian.osuosl.org/debian bookworm-backports/main amd64 Packages [286 kB]
+Get:15 https://debian.osuosl.org/debian bookworm-backports/main Translation-en [244 kB]
+Fetched 30.6 MB in 21s (1464 kB/s)
+Reading package lists...
++ apt-get install -y file
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  file
+0 upgraded, 1 newly installed, 0 to remove and 2 not upgraded.
+Need to get 42.5 kB of archives.
+After this operation, 80.9 kB of additional disk space will be used.
+Get:1 https://debian.osuosl.org/debian bookworm/main amd64 file amd64 1:5.44-3 [42.5 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 42.5 kB in 4s (11.9 kB/s)
+Selecting previously unselected package file.
+(Reading database ... 64066 files and directories currently installed.)
+Preparing to unpack .../file_1%3a5.44-3_amd64.deb ...
+Unpacking file (1:5.44-3) ...
+Setting up file (1:5.44-3) ...
++ apt-get install -y -t bullseye openjdk-11-jdk-headless
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  openjdk-11-jre-headless
+Suggested packages:
+  openjdk-11-demo openjdk-11-source libnss-mdns fonts-dejavu-extra
+  fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei
+  | fonts-wqy-zenhei fonts-indic
+The following NEW packages will be installed:
+  openjdk-11-jdk-headless openjdk-11-jre-headless
+0 upgraded, 2 newly installed, 0 to remove and 2 not upgraded.
+Need to get 112 MB of archives.
+After this operation, 258 MB of additional disk space will be used.
+Get:1 https://deb.debian.org/debian bullseye/main amd64 openjdk-11-jre-headless amd64 11.0.24+8-2~deb11u1 [38.2 MB]
+Get:2 https://deb.debian.org/debian bullseye/main amd64 openjdk-11-jdk-headless amd64 11.0.24+8-2~deb11u1 [73.7 MB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 112 MB in 4s (29.6 MB/s)
+Selecting previously unselected package openjdk-11-jre-headless:amd64.
+(Reading database ... 64076 files and directories currently installed.)
+Preparing to unpack .../openjdk-11-jre-headless_11.0.24+8-2~deb11u1_amd64.deb ...
+Unpacking openjdk-11-jre-headless:amd64 (11.0.24+8-2~deb11u1) ...
+Selecting previously unselected package openjdk-11-jdk-headless:amd64.
+Preparing to unpack .../openjdk-11-jdk-headless_11.0.24+8-2~deb11u1_amd64.deb ...
+Unpacking openjdk-11-jdk-headless:amd64 (11.0.24+8-2~deb11u1) ...
+Setting up openjdk-11-jre-headless:amd64 (11.0.24+8-2~deb11u1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+Processing triggers for ca-certificates-java (20230710~deb12u1) ...
+done.
+Setting up openjdk-11-jdk-headless:amd64 (11.0.24+8-2~deb11u1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-amd64/bin/jaotc to provide /usr/bin/jaotc (jaotc) in auto mode
++ update-java-alternatives --set java-1.11.0-openjdk-amd64
+update-alternatives: error: no alternatives for jconsole
+update-java-alternatives: jdk alternative does not exist: /usr/lib/jvm/java-11-openjdk-amd64/bin/jconsole
+2025-05-27 15:44:22,237 DEBUG: > sudo passwd --lock root
+passwd: password changed.
+2025-05-27 15:44:22,745 DEBUG: > sudo SUDO_FORCE_REMOVE=yes dpkg --purge sudo
+(Reading database ... 64551 files and directories currently installed.)
+Removing sudo (1.9.13p3-1+deb12u1) ...
+Purging configuration files for sudo (1.9.13p3-1+deb12u1) ...
+dpkg: warning: while removing sudo, directory '/etc/sudoers.d' not empty so not removed
+Processing triggers for libc-bin (2.36-9+deb12u10) ...
+2025-05-27 15:44:43,420 INFO: Getting source for revision e634d8f981f48b6b89202cf0e04533f0889e03b3
+2025-05-27 15:44:43,421 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:43,421 DEBUG: > git rev-parse --show-toplevel
+2025-05-27 15:44:43,627 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:43,627 DEBUG: > git submodule foreach --recursive git reset --hard
+2025-05-27 15:44:43,831 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:43,831 DEBUG: > git reset --hard
+2025-05-27 15:44:44,135 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:44,135 DEBUG: > git submodule foreach --recursive git clean -dffx
+2025-05-27 15:44:44,239 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:44,239 DEBUG: > git clean -dffx
+2025-05-27 15:44:44,342 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:44,342 DEBUG: > git -c core.askpass=/bin/true -c core.sshCommand=/bin/false -c url.https://.insteadOf=ssh:// -c url.https://u:p@bitbucket.org/.insteadOf=git@bitbucket.org: -c url.https://u:p@bitbucket.org.insteadOf=git://bitbucket.org -c url.https://u:p@bitbucket.org.insteadOf=https://bitbucket.org -c url.https://u:p@github.com/.insteadOf=git@github.com: -c url.https://u:p@github.com.insteadOf=git://github.com -c url.https://u:p@github.com.insteadOf=https://github.com -c url.https://u:p@gitlab.com/.insteadOf=git@gitlab.com: -c url.https://u:p@gitlab.com.insteadOf=git://gitlab.com -c url.https://u:p@gitlab.com.insteadOf=https://gitlab.com -c url.https://u:p@codeberg.org/.insteadOf=git@codeberg.org: -c url.https://u:p@codeberg.org.insteadOf=git://codeberg.org -c url.https://u:p@codeberg.org.insteadOf=https://codeberg.org fetch --prune --prune-tags --force origin
+2025-05-27 15:44:45,649 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:45,649 DEBUG: > git -c core.askpass=/bin/true -c core.sshCommand=/bin/false -c url.https://.insteadOf=ssh:// -c url.https://u:p@bitbucket.org/.insteadOf=git@bitbucket.org: -c url.https://u:p@bitbucket.org.insteadOf=git://bitbucket.org -c url.https://u:p@bitbucket.org.insteadOf=https://bitbucket.org -c url.https://u:p@github.com/.insteadOf=git@github.com: -c url.https://u:p@github.com.insteadOf=git://github.com -c url.https://u:p@github.com.insteadOf=https://github.com -c url.https://u:p@gitlab.com/.insteadOf=git@gitlab.com: -c url.https://u:p@gitlab.com.insteadOf=git://gitlab.com -c url.https://u:p@gitlab.com.insteadOf=https://gitlab.com -c url.https://u:p@codeberg.org/.insteadOf=git@codeberg.org: -c url.https://u:p@codeberg.org.insteadOf=git://codeberg.org -c url.https://u:p@codeberg.org.insteadOf=https://codeberg.org fetch --prune --tags --force origin
+2025-05-27 15:44:46,501 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:46,502 DEBUG: > git remote set-head origin --auto
+2025-05-27 15:44:47,755 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:47,758 DEBUG: > git checkout -f e634d8f981f48b6b89202cf0e04533f0889e03b3
+2025-05-27 15:44:48,386 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:48,387 DEBUG: > git clean -dffx
+2025-05-27 15:44:48,490 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:48,490 DEBUG: > git rev-parse --show-toplevel
+2025-05-27 15:44:48,697 DEBUG: Directory: build/com.termux
+2025-05-27 15:44:48,697 DEBUG: > git submodule deinit --all --force
+2025-05-27 15:44:48,901 INFO: Creating local.properties file at build/com.termux/local.properties
+2025-05-27 15:44:48,904 INFO: Creating local.properties file at build/com.termux/app/local.properties
+2025-05-27 15:44:48,905 DEBUG: Removing debuggable flags from build/com.termux/app
+2025-05-27 15:44:48,930 INFO: Cleaned build.gradle of keysigning configs at build/com.termux/app/build.gradle
+2025-05-27 15:44:48,935 INFO: Running 'prebuild' commands in build/com.termux/app
+2025-05-27 15:44:48,935 DEBUG: Directory: build/com.termux/app
+2025-05-27 15:44:48,935 DEBUG: > bash -e -u -o pipefail -x -c -- sed -i -e '/publishing {/,/^    }/d' ../terminal-{emulator,view}/build.gradle; sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+/etc/bash.bashrc: line 7: PS1: unbound variable
++ sed -i -e '/publishing {/,/^    }/d' ../terminal-emulator/build.gradle ../terminal-view/build.gradle
++ sed -i -e '/publishing {/,/^    }/d' ../termux-shared/build.gradle
+2025-05-27 15:44:49,139 INFO: Cleaning Gradle project...
+2025-05-27 15:44:49,140 DEBUG: Directory: build/com.termux/app
+2025-05-27 15:44:49,140 DEBUG: > /home/vagrant/fdroidserver/gradlew-fdroid clean
+Found 7.2 via distributionUrl
+Downloading missing gradle version 7.2
+cachedir /home/vagrant/.cache/fdroidserver
+/home/vagrant/.cache/fdroidserver/gradle-7.2-bin.zip: OK
+Running /opt/gradle/versions/7.2/bin/gradle clean
+
+Welcome to Gradle 7.2!
+
+Here are the highlights of this release:
+ - Toolchain support for Scala
+ - More cache hits when Java source files have platform-specific line endings
+ - More resilient remote HTTP build cache behavior
+
+For more details see https://docs.gradle.org/7.2/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.2/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Configure project :terminal-emulator
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Configure project :termux-shared
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :app:externalNativeBuildCleanDebug
+> Task :app:externalNativeBuildCleanRelease
+> Task :app:clean
+
+BUILD SUCCESSFUL in 50s
+3 actionable tasks: 3 executed
+2025-05-27 15:45:45,547 INFO: Scanning source for common problems...
+2025-05-27 15:45:45,568 DEBUG: scanner is configured to use signature data from: 'suss'
+2025-05-27 15:45:45,569 DEBUG: downloading 'https://fdroid.gitlab.io/fdroid-suss/suss.json'
+2025-05-27 15:45:46,263 DEBUG: write 'suss.json' to cache
+2025-05-27 15:45:46,266 DEBUG: next suss.json cache update due in 23:59:59.985951
+2025-05-27 15:45:46,448 INFO: Removing gradle-wrapper.jar at gradle/wrapper/gradle-wrapper.jar
+2025-05-27 15:45:46,493 INFO: Creating source tarball...
+2025-05-27 15:45:46,996 INFO: Building Gradle project...
+2025-05-27 15:45:46,997 DEBUG: Directory: build/com.termux/app
+2025-05-27 15:45:46,997 DEBUG: > /home/vagrant/fdroidserver/gradlew-fdroid assembleRelease
+Found 7.2 via distributionUrl
+Running /opt/gradle/versions/7.2/bin/gradle assembleRelease
+To honour the JVM settings for this build a single-use Daemon process will be forked. See https://docs.gradle.org/7.2/userguide/gradle_daemon.html#sec:disabling_the_daemon.
+Daemon will be stopped at the end of the build 
+
+> Configure project :app
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Configure project :terminal-emulator
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Configure project :termux-shared
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+Exception while marshalling /opt/android-sdk/platforms/android-10/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-11/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-12/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-13/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-14/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-15/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-16/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-17/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-18/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-19/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-20/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-21/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-22/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-23/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-24/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-25/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-26/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-27/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-28/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-29/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-30/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-31/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-32/package.xml. Probably the SDK is read-only
+Exception while marshalling /opt/android-sdk/platforms/android-33/package.xml. Probably the SDK is read-only
+
+> Task :app:preBuild UP-TO-DATE
+> Task :app:extractProguardFiles
+> Task :app:preReleaseBuild
+> Task :terminal-emulator:preBuild UP-TO-DATE
+> Task :terminal-emulator:preReleaseBuild UP-TO-DATE
+> Task :terminal-emulator:compileReleaseAidl NO-SOURCE
+> Task :terminal-view:preBuild UP-TO-DATE
+> Task :terminal-view:preReleaseBuild UP-TO-DATE
+> Task :terminal-view:compileReleaseAidl NO-SOURCE
+> Task :termux-shared:preBuild UP-TO-DATE
+> Task :termux-shared:preReleaseBuild UP-TO-DATE
+> Task :termux-shared:compileReleaseAidl NO-SOURCE
+> Task :app:compileReleaseAidl NO-SOURCE
+> Task :terminal-emulator:packageReleaseRenderscript NO-SOURCE
+> Task :terminal-view:packageReleaseRenderscript NO-SOURCE
+> Task :termux-shared:packageReleaseRenderscript NO-SOURCE
+> Task :app:compileReleaseRenderscript NO-SOURCE
+
+> Task :app:downloadBootstraps
+Downloading https://github.com/termux/termux-packages/releases/download/bootstrap-2025.03.28-r1+apt-android-7/bootstrap-aarch64.zip ...
+Downloading https://github.com/termux/termux-packages/releases/download/bootstrap-2025.03.28-r1+apt-android-7/bootstrap-arm.zip ...
+Downloading https://github.com/termux/termux-packages/releases/download/bootstrap-2025.03.28-r1+apt-android-7/bootstrap-i686.zip ...
+Downloading https://github.com/termux/termux-packages/releases/download/bootstrap-2025.03.28-r1+apt-android-7/bootstrap-x86_64.zip ...
+
+> Task :app:generateReleaseBuildConfig
+> Task :app:javaPreCompileRelease
+> Task :app:writeReleaseApplicationId
+> Task :app:analyticsRecordingRelease
+> Task :terminal-emulator:writeReleaseAarMetadata
+> Task :terminal-view:writeReleaseAarMetadata
+> Task :termux-shared:writeReleaseAarMetadata
+> Task :app:generateReleaseResValues
+> Task :app:generateReleaseResources
+> Task :terminal-emulator:compileReleaseRenderscript NO-SOURCE
+> Task :terminal-emulator:generateReleaseResValues
+> Task :terminal-emulator:generateReleaseResources
+> Task :terminal-emulator:packageReleaseResources
+> Task :terminal-view:compileReleaseRenderscript NO-SOURCE
+> Task :terminal-view:generateReleaseResValues
+> Task :terminal-view:generateReleaseResources
+> Task :terminal-view:packageReleaseResources
+> Task :termux-shared:compileReleaseRenderscript NO-SOURCE
+> Task :termux-shared:generateReleaseResValues
+> Task :termux-shared:generateReleaseResources
+> Task :termux-shared:packageReleaseResources
+> Task :app:createReleaseCompatibleScreenManifests
+> Task :app:extractDeepLinksRelease
+> Task :terminal-emulator:extractDeepLinksRelease
+> Task :terminal-view:extractDeepLinksRelease
+> Task :termux-shared:extractDeepLinksRelease
+> Task :terminal-emulator:compileReleaseLibraryResources
+> Task :terminal-view:processReleaseManifest
+> Task :termux-shared:processReleaseManifest
+> Task :terminal-emulator:processReleaseManifest
+> Task :app:mergeReleaseResources
+> Task :terminal-emulator:parseReleaseLocalResources
+> Task :app:processReleaseMainManifest
+> Task :app:processReleaseManifest
+> Task :app:processReleaseManifestForPackage
+> Task :terminal-view:compileReleaseLibraryResources
+> Task :terminal-emulator:generateReleaseRFile
+> Task :terminal-emulator:generateReleaseBuildConfig
+> Task :terminal-view:parseReleaseLocalResources
+> Task :termux-shared:compileReleaseLibraryResources
+> Task :terminal-emulator:javaPreCompileRelease
+> Task :terminal-view:generateReleaseBuildConfig
+> Task :terminal-view:javaPreCompileRelease
+> Task :termux-shared:generateReleaseBuildConfig
+> Task :termux-shared:javaPreCompileRelease
+> Task :termux-shared:parseReleaseLocalResources
+> Task :app:generateJsonModelRelease
+> Task :terminal-emulator:generateJsonModelRelease
+
+> Task :terminal-emulator:externalNativeBuildRelease
+Build termux_armeabi-v7a
+Build termux_arm64-v8a
+Build termux_x86
+Build termux_x86_64
+
+> Task :terminal-emulator:mergeReleaseJniLibFolders
+> Task :terminal-view:mergeReleaseJniLibFolders
+> Task :terminal-view:mergeReleaseNativeLibs NO-SOURCE
+> Task :terminal-view:stripReleaseDebugSymbols NO-SOURCE
+> Task :terminal-view:copyReleaseJniLibsProjectOnly
+> Task :terminal-emulator:mergeReleaseNativeLibs
+> Task :termux-shared:generateJsonModelRelease
+
+> Task :terminal-emulator:stripReleaseDebugSymbols
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :terminal-emulator:copyReleaseJniLibsProjectOnly
+> Task :termux-shared:mergeReleaseJniLibFolders
+> Task :terminal-emulator:prepareLintJarForPublish
+> Task :terminal-view:prepareLintJarForPublish
+> Task :termux-shared:prepareLintJarForPublish
+> Task :app:mergeReleaseJniLibFolders
+> Task :terminal-emulator:processReleaseJavaRes NO-SOURCE
+> Task :terminal-emulator:bundleLibResRelease NO-SOURCE
+> Task :terminal-view:processReleaseJavaRes NO-SOURCE
+> Task :terminal-view:bundleLibResRelease NO-SOURCE
+> Task :termux-shared:processReleaseJavaRes NO-SOURCE
+> Task :termux-shared:bundleLibResRelease NO-SOURCE
+> Task :app:mergeReleaseShaders
+> Task :app:compileReleaseShaders NO-SOURCE
+> Task :app:generateReleaseAssets UP-TO-DATE
+> Task :terminal-emulator:mergeReleaseShaders
+> Task :terminal-emulator:compileReleaseShaders NO-SOURCE
+> Task :terminal-emulator:generateReleaseAssets UP-TO-DATE
+> Task :terminal-emulator:packageReleaseAssets
+> Task :terminal-view:mergeReleaseShaders
+> Task :terminal-view:compileReleaseShaders NO-SOURCE
+> Task :terminal-view:generateReleaseAssets UP-TO-DATE
+> Task :terminal-view:packageReleaseAssets
+> Task :termux-shared:mergeReleaseShaders
+> Task :termux-shared:compileReleaseShaders NO-SOURCE
+> Task :termux-shared:generateReleaseAssets UP-TO-DATE
+> Task :termux-shared:packageReleaseAssets
+> Task :app:mergeReleaseAssets
+> Task :app:compressReleaseAssets
+> Task :app:processReleaseJavaRes NO-SOURCE
+> Task :app:checkReleaseDuplicateClasses
+> Task :app:collectReleaseDependencies
+> Task :app:sdkReleaseDependencyData
+> Task :app:writeReleaseAppMetadata
+> Task :app:writeReleaseSigningConfigVersions
+> Task :app:checkReleaseAarMetadata
+> Task :terminal-view:generateReleaseRFile
+> Task :app:mergeReleaseJavaResource
+
+> Task :terminal-emulator:compileReleaseJavaWithJavac
+Note: /home/vagrant/build/com.termux/terminal-emulator/src/main/java/com/termux/terminal/TerminalSession.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :terminal-emulator:mergeReleaseGeneratedProguardFiles
+> Task :terminal-emulator:exportReleaseConsumerProguardFiles
+> Task :terminal-emulator:bundleLibRuntimeToJarRelease
+> Task :terminal-emulator:bundleLibCompileToJarRelease
+
+> Task :termux-shared:externalNativeBuildRelease
+Build local-socket_armeabi-v7a
+Build local-socket_arm64-v8a
+Build local-socket_x86
+Build local-socket_x86_64
+
+> Task :termux-shared:mergeReleaseNativeLibs
+> Task :termux-shared:generateReleaseRFile
+
+> Task :terminal-view:compileReleaseJavaWithJavac
+Note: /home/vagrant/build/com.termux/terminal-view/src/main/java/com/termux/view/TerminalView.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :terminal-view:bundleLibCompileToJarRelease
+
+> Task :termux-shared:stripReleaseDebugSymbols
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :terminal-view:mergeReleaseGeneratedProguardFiles
+> Task :termux-shared:copyReleaseJniLibsProjectOnly
+> Task :app:processReleaseResources
+
+> Task :termux-shared:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :termux-shared:bundleLibCompileToJarRelease
+> Task :termux-shared:mergeReleaseGeneratedProguardFiles
+> Task :termux-shared:exportReleaseConsumerProguardFiles
+> Task :terminal-view:exportReleaseConsumerProguardFiles
+> Task :terminal-view:bundleLibRuntimeToJarRelease
+> Task :termux-shared:bundleLibRuntimeToJarRelease
+
+> Task :app:externalNativeBuildRelease
+Build termux-bootstrap_armeabi-v7a
+Build termux-bootstrap_arm64-v8a
+Build termux-bootstrap_x86
+Build termux-bootstrap_x86_64
+
+> Task :app:mergeReleaseNativeLibs
+
+> Task :app:compileReleaseJavaWithJavac
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+
+> Task :app:compileReleaseSources
+> Task :app:optimizeReleaseResources
+> Task :app:lintVitalRelease
+
+> Task :app:stripReleaseDebugSymbols
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :app:mergeReleaseGeneratedProguardFiles
+
+> Task :app:extractReleaseNativeSymbolTables
+WARNING:: NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+NDK was located by using ndk.dir property. This method is deprecated and will be removed in a future release. Please delete ndk.dir from local.properties and set android.ndkVersion to [22.1.7171670] in all native modules in the project. https://developer.android.com/r/studio-ui/ndk-dir
+
+> Task :app:minifyReleaseWithR8
+WARNING:: R8: Missing class: java.lang.ClassValue
+
+> Task :app:l8DexDesugarLibRelease
+> Task :app:mergeReleaseNativeDebugMetadata
+> Task :app:packageRelease
+> Task :app:assembleRelease
+
+BUILD SUCCESSFUL in 3m 51s
+106 actionable tasks: 106 executed
+2025-05-27 15:49:39,162 INFO: Successfully built version 0.119.0-beta.3 of com.termux from e634d8f981f48b6b89202cf0e04533f0889e03b3
+2025-05-27 15:49:39,470 DEBUG: Checking build/com.termux/app/build/outputs/apk/release/termux-app_apt-android-7-release_universal.apk
+2025-05-27 15:49:39,725 INFO: success: com.termux
+2025-05-27 15:49:39,725 INFO: Finished
+2025-05-27 15:49:39,725 INFO: 1 build succeeded
